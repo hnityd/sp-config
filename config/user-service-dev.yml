@@ -16,4 +16,10 @@ eureka:
       
 logging:
   level:
-    com.tedu: debug      
+    com.tedu: debug  
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh   
