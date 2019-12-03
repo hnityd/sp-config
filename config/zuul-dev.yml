@@ -1,7 +1,11 @@
 spring:
   application:
     name: zuul
-    
+  rabbitmq:
+    host: 192.168.198.5
+    port: 5672
+    username: admin
+    password: admin    
     
 server:
   port: 3001
@@ -15,7 +19,7 @@ zuul:
   retryable: true 
  
       
-#zuul 路由配置可以省略，缺省以服务 id 作为访问路径
+#zuul 璺敱閰嶇疆鍙互鐪佺暐锛岀己鐪佷互鏈嶅姟 id 浣滀负璁块棶璺緞
 #zuul:
 #  routes:
 #    item-service: /item-service/**
@@ -29,7 +33,7 @@ ribbon:
   MaxAutoRetriesNextServer: 1  
   
   
-#降低 hystrix 超时时间，以便测试降级        
+#闄嶄綆 hystrix 瓒呮椂鏃堕棿锛屼互渚挎祴璇曢檷绾�        
 hystrix:
   command:
     default:
